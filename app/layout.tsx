@@ -1,26 +1,31 @@
-import type { Metadata } from "next";
-import { Bricolage_Grotesque, Literata } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Kaushan_Script, Lora, Nunito } from "next/font/google";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
-const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", display: "swap" });
-const body = Literata({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const serif = Lora({ subsets: ["latin"], variable: "--font-serif", display: "swap" });
+const sans = Nunito({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const script = Kaushan_Script({ subsets: ["latin"], weight: "400", variable: "--font-script", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Pasaporte de Bienestar Rural Melipilla",
-  description: "Recorre Melipilla sello a sello: cabalgatas, huertos, bosque y cocinas comunitarias contados por quienes los habitan.",
+  title: "RAÍCES, experiencias rurales en Melipilla",
+  description: "Descubre Melipilla a través de sus personas, sabores, naturaleza y tradiciones.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#4b5a2b",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${display.variable} ${body.variable}`}>
+    <html lang="es" className={`${serif.variable} ${sans.variable} ${script.variable}`}>
       <body>
         <Nav />
         <main>{children}</main>
         <footer className="footer">
-          <div className="wrap">
-            Demo con datos ficticios. Los sellos y las fichas se guardan solo en este navegador.
-          </div>
+          <div className="wrap">Versión de demostración de RAÍCES. Los datos son de prueba.</div>
         </footer>
       </body>
     </html>

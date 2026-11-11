@@ -41,27 +41,27 @@ export default function Sello({ e, fecha, size = 140, nuevo }: Props) {
         </defs>
         <circle cx="70" cy="70" r="66" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray={activo ? undefined : "4 5"} />
         <circle cx="70" cy="70" r="40" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <text fontSize="12" fontWeight="700" letterSpacing="1.5" fill="currentColor" style={{ fontFamily: "var(--font-display), sans-serif" }}>
+        <text fontSize="12" fontWeight="700" letterSpacing="1.5" fill="currentColor" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
           <textPath href={`#${u}-t`} startOffset="25%" textAnchor="middle">
             {e.corto.toUpperCase()}
           </textPath>
         </text>
-        <text fontSize="9" letterSpacing="2" fill="currentColor" style={{ fontFamily: "var(--font-display), sans-serif" }}>
+        <text fontSize="9" letterSpacing="2" fill="currentColor" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
           <textPath href={`#${u}-b`} startOffset="50%" textAnchor="middle">
             {activo ? `MELIPILLA ${anio}` : "POR SELLAR"}
           </textPath>
         </text>
         {activo ? (
           <>
-            <text x="70" y="72" textAnchor="middle" fontSize="26" fontWeight="800" fill="currentColor" style={{ fontFamily: "var(--font-display), sans-serif" }}>
+            <text x="70" y="72" textAnchor="middle" fontSize="26" fontWeight="800" fill="currentColor" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
               {dia}
             </text>
-            <text x="70" y="88" textAnchor="middle" fontSize="11" letterSpacing="1" fill="currentColor" style={{ fontFamily: "var(--font-display), sans-serif" }}>
+            <text x="70" y="88" textAnchor="middle" fontSize="11" letterSpacing="1" fill="currentColor" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
               {mes.toUpperCase()}
             </text>
           </>
         ) : (
-          <text x="70" y="78" textAnchor="middle" fontSize="24" fill="currentColor" style={{ fontFamily: "var(--font-display), sans-serif" }}>
+          <text x="70" y="78" textAnchor="middle" fontSize="24" fill="currentColor" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
             ?
           </text>
         )}
