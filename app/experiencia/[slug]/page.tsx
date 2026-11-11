@@ -82,13 +82,7 @@ export default async function PaginaExperiencia({ params }: { params: { slug: st
           <div className="acciones">
             <EscucharHistoria texto={`${e.titulo}. ${e.historia}`} />
             {wa && (
-              <a className="btn btn-whatsapp" href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer">
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M20.5 11.8a8.7 8.7 0 0 1-12.9 7.6L3 20.5l1.2-4.5a8.7 8.7 0 1 1 16.3-4.2Z" />
-                  <path d="M8.2 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.2.1.3.3.3.5 0 .4-.2 1.1-.6 1.4-.4.4-1 .6-1.6.5-1-.1-2.3-.7-3.5-1.8-1.4-1.2-2.3-2.8-2.5-3.8-.2-.8 0-1.5.5-2Z" />
-                </svg>
-                Consultar por WhatsApp
-              </a>
+              <a className="btn" href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer">Consultar por WhatsApp</a>
             )}
           </div>
 
